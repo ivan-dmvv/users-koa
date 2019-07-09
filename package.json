@@ -1,0 +1,24 @@
+{
+  "license": "ISC",
+  "version": "1.0.0",
+  "name": "users-koa",
+  "author": "Ivan Dimov",
+  "description": "Koa api: users",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivan-dmvv/users-koa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ivan-dmvv/users-koa/issues"
+  },
+  "homepage": "https://github.com/ivan-dmvv/users-koa#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0"
+  }
+}
