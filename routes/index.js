@@ -1,7 +1,7 @@
 const Router = require('koa-router');
-const router = new Router();
-
 const User = require('../controllers/user');
+
+const router = new Router();
 
 router.get('/users/:id', async ctx => {
     try {
