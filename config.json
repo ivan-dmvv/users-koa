@@ -1,0 +1,10 @@
+{
+  "host": "localhost",
+  "db": {
+    "port": "27017",
+    "name": "users-koa"
+  },
+  "app": {
+    "port": "8000"
+  }
+}

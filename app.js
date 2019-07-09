@@ -1,10 +1,17 @@
 const Koa = require('koa');
+const db = require('./db');
+const routes = require('./routes');
+const koaBody = require('koa-body');
+const config = require('./config.json');
+
 const app = new Koa();
 
-app.use(async ctx => {
-    ctx.body = 'Hello!';
-});
+app.use(koaBody());
+app.use(routes.routes());
+app.use(routes.allowedMethods());
 
-app.listen(8000, () => {
-    console.log('http://localhost:8000');
+db.initDb(() => {
+    app.listen(config.app.port, () => {
+        console.log(`Application is running here: http://${config.host}:${config.app.port}`);
+    });
 });
